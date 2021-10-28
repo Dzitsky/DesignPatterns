@@ -1,4 +1,4 @@
-﻿namespace Flyweight
+﻿namespace Flyweight.PatternStruct
 {
     class UnsharedConcreteFlyweight : Flyweight
     {

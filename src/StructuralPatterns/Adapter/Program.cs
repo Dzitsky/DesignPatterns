@@ -16,7 +16,8 @@ namespace Adapter
 
         static void GetBalance(IService service)
         {
-            string result = service.Balance("");
+            string accountNumber = "";
+            string result = service.Balance(accountNumber);
             Console.WriteLine(result);
         }
     }

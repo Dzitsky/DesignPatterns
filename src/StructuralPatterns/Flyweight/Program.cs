@@ -6,24 +6,29 @@ namespace Flyweight
     {
         static void Main(string[] args)
         {
-            int extrinsicstate = 22;
+            double longitude = 37.61;
+            double latitude = 55.74;
 
-            FlyweightFactory f = new FlyweightFactory();
+            HouseFactory houseFactory = new HouseFactory();
+            for (int i = 0; i < 5; i++)
+            {
+                House panelHouse = houseFactory.GetHouse("Panel");
+                if (panelHouse != null)
+                    panelHouse.Build(longitude, latitude);
+                longitude += 0.1;
+                latitude += 0.1;
+            }
 
-            Flyweight fx = f.GetFlyweight("X");
-            fx.Operation(--extrinsicstate);
+            for (int i = 0; i < 5; i++)
+            {
+                House brickHouse = houseFactory.GetHouse("Brick");
+                if (brickHouse != null)
+                    brickHouse.Build(longitude, latitude);
+                longitude += 0.1;
+                latitude += 0.1;
+            }
 
-            Flyweight fy = f.GetFlyweight("Y");
-            fy.Operation(--extrinsicstate);
-
-            Flyweight fd = f.GetFlyweight("D");
-            fd.Operation(--extrinsicstate);
-
-            UnsharedConcreteFlyweight uf = new UnsharedConcreteFlyweight();
-
-            uf.Operation(--extrinsicstate);
-
-            Console.ReadKey();
+        Console.ReadKey();
         }
     }
 }

@@ -7,9 +7,7 @@ namespace Decorator
         static void Main(string[] args)
         {
             IComponent tree = new ChrismasComponent();
-
             tree = new MusicDecorator(tree);
-
             tree = new LightDecorator(tree);
             
             Сelebrate(tree);
@@ -24,4 +22,4 @@ namespace Decorator
             //Console.WriteLine("Light on!");
         }
     }
-}
+} 

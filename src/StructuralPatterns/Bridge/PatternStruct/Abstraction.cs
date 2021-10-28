@@ -1,4 +1,4 @@
-﻿namespace Bridge
+﻿namespace Bridge.PatternStruct
 {
     abstract class Abstraction
     {

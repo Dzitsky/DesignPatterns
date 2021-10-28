@@ -16,8 +16,9 @@ namespace Proxy
 
         static void GetBalance(IService service)
         {
-            //Check number?
-            string  result = service.Balance("");
+            string accountNumber = "";
+            //Check accountNumber?
+            string result = service.Balance(accountNumber);
             Console.WriteLine(result);        
         }
     }

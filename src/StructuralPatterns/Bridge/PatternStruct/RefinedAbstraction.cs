@@ -1,4 +1,4 @@
-﻿namespace Bridge
+﻿namespace Bridge.PatternStruct
 {
     class RefinedAbstraction : Abstraction
     {

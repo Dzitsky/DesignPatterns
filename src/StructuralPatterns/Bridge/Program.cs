@@ -6,13 +6,23 @@ namespace Bridge
     {
         static void Main(string[] args)
         {
-            Abstraction abstraction;
-            abstraction = new RefinedAbstraction(new ConcreteImplementorA());
-            abstraction.Operation();
-            abstraction.Implementor = new ConcreteImplementorB();
-            abstraction.Operation();
+            Console.WriteLine("[ freelancer works ]");
 
-            Console.ReadKey();
+            Programmer freelancer = new FreelanceProgrammer(new CPPLanguage());
+            freelancer.DoWork();
+            freelancer.EarnMoney();
+
+            freelancer.Language = new CSharpLanguage();
+            freelancer.DoWork();
+            freelancer.EarnMoney();
+
+            Console.WriteLine("[ corporate programmer works ]");
+
+            Programmer corporateProgrammer = new CorporateProgrammer(new CSharpLanguage());
+            corporateProgrammer.DoWork();
+            corporateProgrammer.EarnMoney();
+
+            Console.Read();
         }
     }
 }

@@ -5,9 +5,13 @@
         private int weight;
         private bool isTrailer;
 
+        private Engine engine;
+
         public Car() {
             weight = 1000;
             isTrailer = false;
+
+            engine = new Engine("v8");
         }
 
         public void AddTrailer()
@@ -22,6 +26,11 @@
             Car newCar = new Car();
             newCar.weight = weight;
             newCar.isTrailer = isTrailer;
+
+            newCar.engine = new Engine(engine.model);
+
+            //return this.MemberwiseClone();
+
             return newCar;
         }
 
