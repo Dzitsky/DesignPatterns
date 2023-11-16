@@ -6,11 +6,11 @@ namespace Builder
     {
         static void Main(string[] args)
         {
-            //Car car = new Car(1500, true);
+            //var car = new Car(1500, true);
 
             Car car = new Car()
                 .SetWeight(2000)
-                .AddTrailer();
+                .AddTrailer().Build();
             Console.WriteLine(car);
 
             Console.ReadKey();

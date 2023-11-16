@@ -1,4 +1,6 @@
-﻿namespace Builder
+﻿using System;
+
+namespace Builder
 {
     class Car : ICloneable
     {
@@ -36,12 +38,19 @@
             return this;
         }
 
+        public Car Build()
+        {
+            return this;
+        }
+
         //public void AddTrailer()
         //{
         //    if (isTrailer) return;
         //    isTrailer = true;
         //    weight += 500;
         //}
+
+
 
         public object Clone()
         {

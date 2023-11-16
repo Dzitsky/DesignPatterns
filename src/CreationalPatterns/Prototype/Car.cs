@@ -1,4 +1,6 @@
-﻿namespace Prototype
+﻿using System;
+
+namespace Prototype
 {
     class Car : ICloneable
     {
@@ -23,15 +25,15 @@
 
         public object Clone()
         {
-            Car newCar = new Car();
-            newCar.weight = weight;
-            newCar.isTrailer = isTrailer;
+            //Car newCar = new Car();
+            //newCar.weight = weight;
+            //newCar.isTrailer = isTrailer;
 
-            newCar.engine = new Engine(engine.model);
+            //newCar.engine = new Engine(engine.model);
 
-            //return this.MemberwiseClone();
+            return this.MemberwiseClone();
 
-            return newCar;
+            //return newCar;
         }
 
         public Car Copy()
