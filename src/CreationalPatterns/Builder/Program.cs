@@ -9,8 +9,10 @@ namespace Builder
             //var car = new Car(1500, true);
 
             Car car = new Car()
-                .SetWeight(2000)
-                .AddTrailer().Build();
+                .SetWeight(1000)
+                //.SetColor("")
+                .AddTrailer()
+                .Build();
             Console.WriteLine(car);
 
             Console.ReadKey();

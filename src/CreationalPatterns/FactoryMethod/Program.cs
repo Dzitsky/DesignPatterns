@@ -12,7 +12,7 @@ namespace FactoryMethod
             DeliveryService deliveryService = new DeliveryService();
             deliveryService.Delivery(car);
             deliveryService.Delivery(ship);
-
+        
 
             Console.ReadKey();
         }

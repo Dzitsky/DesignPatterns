@@ -11,6 +11,8 @@ namespace Composite
             Composite subtree = new Composite("Subtree");
             root.Add(leaf);
             root.Add(subtree);
+           //subtree.Add(leaf2);
+
             root.Display();
 
             Console.ReadKey();

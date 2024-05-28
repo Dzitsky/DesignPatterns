@@ -26,6 +26,12 @@ namespace Builder
 
         public Car SetWeight(int weight)
         {
+            //this.weight = weight;
+            return this;
+        }
+
+        public Car SetColor(string color)
+        {
             this.weight = weight;
             return this;
         }

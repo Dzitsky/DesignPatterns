@@ -6,5 +6,9 @@
         {
             Console.WriteLine("Execute A1");
         }
+        public void A2()
+        {
+            Console.WriteLine("Execute A2");
+        }
     }
 }

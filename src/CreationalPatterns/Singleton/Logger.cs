@@ -3,6 +3,7 @@
     class Logger
     {
         static Logger instance  = null;
+        private static object instanceLock = new object();
 
         private Logger()
         {
@@ -13,7 +14,13 @@
         {
             if (instance == null)
             {
-                instance = new Logger();
+                //lock (instanceLock)
+                //{
+                    if (instance == null)
+                    {
+                        instance = new Logger();
+                    }
+                //}
             }
             return instance;
         }

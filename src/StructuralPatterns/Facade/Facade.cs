@@ -15,8 +15,10 @@
         public void Operation1()
         {
             subsystemA.A1();
+            //subsystemA.A2();
             subsystemB.B1();
             subsystemC.C1();
+            //subsystemA.A2();
         }
         public void Operation2()
         {

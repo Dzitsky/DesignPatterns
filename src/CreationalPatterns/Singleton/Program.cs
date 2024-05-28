@@ -10,7 +10,9 @@ namespace Singleton
             Car car = new Car();
             car.Move();
 
-             Console.ReadKey();
+            Logger.GetInstance().Debug("Logger : Read any key");
+
+            Console.ReadKey();
         }
     }
 }
